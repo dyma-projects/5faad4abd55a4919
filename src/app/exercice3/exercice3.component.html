@@ -1,0 +1,8 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<p *ngIf='statut; else elseBlock'>p1</p>
+<ng-template #elseBlock><p>p2</p></ng-template>
+<button (click)="statut = !statut">Clic moi</button>

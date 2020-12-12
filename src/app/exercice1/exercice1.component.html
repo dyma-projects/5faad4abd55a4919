@@ -1,0 +1,55 @@
+<p>Bonjour, merci pour la correction, désolé pour le côté un peu bazarre,<br>
+J'ai voulu essayés quelque petites choses pour me familiariser avec Angular. <br>
+J'y ai inscris quelques petites questions en commentaire au niveau du .ts, serait-ce possible d'y avoir réponse svp ? <br>
+Merci encore et bon courage !
+<br>
+</p>
+
+<h2>{{ titre }}</h2>
+<h4>Attribut</h4>
+<input [type]="att" [placeholder]="place">
+<input [type]="sub" [value]='value'>
+<a [href]="lien">{{ label }}</a>
+<br>
+<br>
+<br>
+<br>
+<h4>Événement</h4>
+<p>test du hover</p>
+<div class="square"
+[style.border]='color'
+[style.background]='back'
+(click)="changeBorder('5px solid green', 'white')"
+(mouseenter)="changeBorder('20px solid purple', 'orange')"
+(mouseleave)="changeBorder('1px solid blue', 'white')"
+>
+</div>
+
+<p>test du focus</p>
+<input type="text" 
+[value]='essaie'
+[style.background]='fond'
+(focus)="foc('red')"
+(focusout)="foc('white')"
+>
+<br>
+<br>
+<br>
+<br>
+<h4>Double binging</h4>
+<input type="text" [(ngModel)]="exemple">
+<br>
+<p>{{ exemple }}</p>
+<hr>
+<p>Ajouter un nom de couleur</p>
+<input type="text" [(ngModel)]='remplir'>
+<div class="carré"
+[style.border]="couleur"
+[style.background]="remplir"
+>
+</div>
+<hr>
+<p>faire apparaitre une phrase s'il y a un contenu ou non avec une couleur</p>
+<input type="text" [(ngModel)]='show'>
+<div *ngIf="show; else elseBlock" [style.color]='popo'>Oui c'est bien</div>
+<ng-template [style.color]='nono' #elseBlock>Pas bon</ng-template>

@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./exercice2.component.css']
 })
 export class Exercice2Component implements OnInit {
+ 
+  public unClic(): void{
+    console.log("clic");
+  }
 
-  constructor() { }
+  constructor() { 
+  }
 
   ngOnInit() {
   }
